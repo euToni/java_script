@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código em JavaScript</title>
+    <style>
+        h1{
+        text-align: center;
+        color:rgb(80, 9, 9)
+        }
+        body{
+            background-color: rgb(195, 210, 223);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>To safe</p>
+    <script>
+     let n1 = Number(window.prompt ('Digite um número')) //Convertendo para numero
+     let n2 = Number(window.prompt ('Digite outro número')) //Para converter para string basta usar String(n) no lugar do Number()
+
+     let res = n1 + n2
+     window.alert('A soma dos valores é ' + res)
+
+     let nome = prompt('Qual é o seu nome?')
+
+     alert('Seu nome tem ' + nome.length + ' letras')
+     alert(`Seu nome em maiúsculas fica ${nome.toUpperCase()}`)
+    </script>
+</body>
+</html>
