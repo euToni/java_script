@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua nacionalidade:</title>
+    <style>
+        main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 400px;
+            height: 350px;
+            padding: 20px;
+            background-color: chocolate;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px rgba(255, 166, 0, 0.76);
+        }
+
+        main > h1{
+            color: white;
+            background-color: rgb(158, 73, 12);
+            border-radius: 10px;
+            margin-bottom: 100px;
+        }
+
+        input {
+            padding: 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(169, 243, 57, 0.815);
+            margin-bottom: 70px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: rgb(88, 4, 4);
+        }
+
+        div{
+            background-color: white;
+            padding: 7px;
+            border-radius: 10px;
+        }
+
+        #botao:hover{
+            border: 1px solid white;
+            transform: scale(1.1);
+            transition: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Descubra sua nacionalidade</h1>
+        <input type="text" name="txt" id="txt" placeholder="Onde você nasceu?" required>
+        <input type="button" value="Verificar" onclick="clicar()" id="botao">
+        <div id="res">Sua nacionalidade é...</div>
+    </main>
+    <script>
+        function clicar(){
+            let nacio = document.getElementById('txt')
+            let res = document.getElementById('res')
+            if(nacio.value == 'Brasil' || nacio.value == 'brasil'){
+                res.innerHTML = 'Você é brasileiro'
+            
+            }else if(nacio.value == 'França'|| nacio.value == 'frança'){
+                res.innerHTML ='Você é Francês'
+            }
+            else if(nacio.value == ''){
+                res.innerHTML= 'Preencha o campo acima, por favor!'
+            }
+            else {
+            
+            res.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+</body>
+</html>
