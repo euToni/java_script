@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DOM</title>
+    <style>
+
+        #area{
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%, -50%);
+
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: larger;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(68, 172, 68);
+            color: white;
+            border: 2px solid rgb(3, 80, 3);
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+     <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" onmousedown="pressionar()"> 
+         Interaja 
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.style.transition = '2s'
+
+
+        function clicar(){
+            a.style.background = 'black'
+            a.innerHTML = 'Clicou!'
+        }
+        function entrar(){
+            a.style.background = 'purple'
+            a.innerHTML = 'Entrou'
+            
+        }
+        function sair(){
+            a.style.background = 'pink'
+            a.innerHTML = 'Saiu'
+        }
+        function pressionar(){
+            a.style.background = 'blue'
+            a.innerHTML = 'Pressionou'  
+        }
+
+    </script>
+</body>
+</html>

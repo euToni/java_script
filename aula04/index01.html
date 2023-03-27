@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        main{
+            display: block;
+            margin: auto;
+            margin-top: 50vh;
+            transform: translateY(-50%);
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            width: 500px;
+            height: 300px;
+            background-color: aliceblue;
+            border: 3px solid  rgb(4, 131, 216) ;
+            border-radius: 8px;
+        }
+        
+        main > h1{
+            background-color: rgb(4, 131, 216);
+            color: white;
+            padding: 20px;
+            margin-top: 0px;
+            margin-bottom: 110px;
+        }
+        #res{
+            background-color:  rgb(4, 131, 216);
+            color: white;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 0px 0px 8px 8px;
+            font-size: 2em;
+        }
+
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(169, 201, 230);
+        }
+        #botao{
+            color: white;
+            background-color: rgb(74, 121, 165);
+            text-shadow: 1px 1px rgb(23, 11, 138);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculadora</h1>
+        <input type="number" name="n1" id="in1"> +
+        <input type="number" name="n2" id="in2">
+        <input type="button" value="Somar" onclick="somar()" id="botao"> <br> <br>
+        <div id="res">Resposta</div>
+    </main>
+
+    <script>
+        let num1 = document.getElementById('in1')
+        let num2 = document.getElementById('in2')
+
+        function somar(){
+            let N1 = Number(num1.value)
+            let N2 = Number(num2.value)
+
+            let res = document.getElementById('res')
+            res.innerHTML = N1 + N2
+        }
+    </script>
+</body>
+</html>
