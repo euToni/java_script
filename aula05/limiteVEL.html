@@ -45,7 +45,7 @@
     <main>
         <h1>Radar de Velocidade:</h1>
         <section>
-            <input type="number" name="vel" id="ivel">
+            <input type="number" name="vel" id="ivel" onclick="limpar()">
             <input type="button" value="verificar" onclick="verificar()">
             <div id="lim">Insira a velocidade acima:</div>
             <div id="veloc"></div>
@@ -55,15 +55,16 @@
     <script>
         function verificar(){
         var vel = document.getElementById('ivel')
+        var tvel = Number(vel.value)
         var limI = 60
         lim.innerHTML = `O limite de velocidade da rodovia é de ${limI}`
-        veloc.innerHTML = `Sua velocidade é de ${vel.value}KM/h`
-        if (vel.value > 60){
+        veloc.innerHTML = `Sua velocidade é de ${tvel}KM/h`
+        if (tvel.value > 60){
         
         var res = document.getElementById('res')
         res.innerHTML = 'Você ultrapassou o limite permitido. <strong>MULTADO!</strong>'
 
-        } else if (vel.value <= 0){
+        } else if (tvel.value <= 0){
             var res = document.getElementById('res')
             res.innerHTML = '[ERRO] Insira um válor válido, por favor!'
         } else { 
@@ -71,6 +72,7 @@
             res.innerHTML = 'Diriga sempre com cuidado'
         }
     }
+
     </script>
 </body>
 </html>
